@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emotion_seq: 1
+  emotion_name: MyString
+  emotion_comment: MyText
+
+two:
+  emotion_seq: 1
+  emotion_name: MyString
+  emotion_comment: MyText
