@@ -1,6 +1,7 @@
 <%= form_for @user, url: "/users", html: {metod: :post } do |f| %>
 <p>投稿する</p>
 <p>ニックネーム：<%= f.text_field :name %></p>
-<p>年齢：<<%= f.text_field :age %></p>
+<p>年齢：<%= f.text_field :age %></p>
 <%= f.submit %>
-<<%= end %>>
+<% end %>
+
