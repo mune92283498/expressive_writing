@@ -1,0 +1,24 @@
+<h2>感情一覧</h2>
+<div class="row">
+  <div class="col-12 col-md-12">
+    <table class="table table-striped">
+      <thead class="thead-light">
+        <tr>
+          <th>No.</th>
+          <th>感情名</th>
+          <th>感情内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @emotion.each do |emotion| %>
+        <tr>
+          <td><%= emotion.emotion_seq %></td>
+          <td><%= emotion.emotion_name %></td>
+          <td><%= emotion.emotion_comment%></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
