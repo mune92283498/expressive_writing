@@ -1,24 +1,28 @@
 <h2>感情一覧</h2>
 <div class="row">
   <div class="col-12 col-md-12">
-    <table class="table table-striped">
+    <table class="table table-striped table-hover">
       <thead class="thead-light">
-        <tr>
+        <tr class="text-center">
           <th>No.</th>
           <th>感情名</th>
           <th>感情内容</th>
+          <th>操作</th>
         </tr>
       </thead>
       <tbody>
         <% @emotions.each do |emotion| %>
         <tr>
-          <td><%= emotion.emotion_seq %></td>
+          <td><%= emotion.id %></td>
           <td><%= emotion.emotion_name %></td>
           <td><%= emotion.emotion_comment%></td>
+          <td><%= link_to '編集', edit_emotion_path(emotion) %></td>
         </tr>
         <% end %>
       </tbody>
     </table>
-
+    <div>
+      <%= link_to '新規作成', new_emotion_path %>
+    </div>
   </div>
 </div>
