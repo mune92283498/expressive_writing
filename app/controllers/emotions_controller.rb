@@ -21,6 +21,17 @@ class EmotionsController < ApplicationController
   end
 
   def edit
+    @emotion = Emotion.find(params[:id])
+  end
+
+  def update
+    @emotion = Emotion.find(params[:id])
+    if @emotion.update(emotion_params)
+      redirect_to root_path, notice: '更新しました。'
+    else
+      flash[:alert] = '更新できませんでした。'
+      render[:edit]
+    end
   end
 
   private 
