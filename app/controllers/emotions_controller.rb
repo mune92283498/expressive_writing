@@ -30,7 +30,7 @@ class EmotionsController < ApplicationController
       redirect_to root_path, notice: '更新しました。'
     else
       flash[:alert] = '更新できませんでした。'
-      render[:edit]
+      render :edit
     end
   end
 
