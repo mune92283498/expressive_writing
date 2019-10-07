@@ -34,6 +34,12 @@ class EmotionsController < ApplicationController
     end
   end
 
+  def destroy
+    @emotion = Emotion.find(params[:id])
+    @emotion.destroy
+    redirect_to root_path, notice: '削除しました。'
+  end
+
   private 
   def emotion_params
     params.require(:emotion).permit(:emotion_name, :emotion_comment)

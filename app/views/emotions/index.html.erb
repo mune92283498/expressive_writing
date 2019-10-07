@@ -14,9 +14,11 @@
         <% @emotions.each do |emotion| %>
         <tr>
           <td><%= emotion.id %></td>
-          <td><%= emotion.emotion_name %></td>
+          <td><%= link_to emotion.emotion_name, emotion_path(emotion) %></td>
           <td><%= emotion.emotion_comment%></td>
-          <td><%= link_to '編集', edit_emotion_path(emotion) %></td>
+          <td><%= link_to '編集', edit_emotion_path(emotion) %>
+            <%= link_to '削除', emotion_path(emotion), method: :delete, data:{ confirm: '削除しますか？'} %>
+          </td>
         </tr>
         <% end %>
       </tbody>
