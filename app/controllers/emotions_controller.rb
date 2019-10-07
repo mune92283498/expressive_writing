@@ -4,6 +4,7 @@ class EmotionsController < ApplicationController
   end
 
   def show
+    # @emotion = Emotion.find(params[:id])
   end
   
   def new
