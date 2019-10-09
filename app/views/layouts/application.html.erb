@@ -15,11 +15,11 @@
     <div class="navbar-brand">ExpressiveWriting</div>
   </div>
   <div class="container">
-    <% if flash[:notice] %>
-    <p class="text-success"><%= flash[:notice] %></p>
+    <% if flash[:notice].present? %>
+    <div class="alert alert-success"><%= flash.now[:notice] %></div>
     <% end %>
-    <% if flash[:alert] %>
-    <p class="text-danger"><%= flash[:alert] %></p>
+    <% if flash[:alert].present? %>
+    <p class="alert alert-danger"><%= flash.now[:alert] %></p>
     <% end %>
 
     <%= yield %>
