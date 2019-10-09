@@ -20,7 +20,7 @@
             <td><%= emotion.id %></td>
             <td><%= link_to emotion.emotion_name, emotion_path(emotion) %></td>
             <td><%= emotion.emotion_comment%></td>
-            <td class="text-center"><%= link_to '編集', edit_emotion_path(emotion),class: "btn btn-primary mr-2" %>
+            <td class="text-center"><%= link_to '編集', edit_emotion_path(emotion),class: "btn btn-success mr-2" %>
               <%= link_to '削除', emotion_path(emotion), method: :delete, data:{ confirm: '削除しますか？'}, class: "btn btn-danger" %>
             </td>
           </tr>
